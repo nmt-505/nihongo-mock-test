@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
@@ -29,7 +30,9 @@ function Home() {
           </p>
 
           <div className="flex justify-center gap-4 mt-10">
-            <Button text="Start Free Mock Tests" />
+            <Link to="/free">
+  <Button text="Start Free Mock Tests" />
+</Link>
             <Button
               text="Premium Mock Tests"
               variant="secondary"

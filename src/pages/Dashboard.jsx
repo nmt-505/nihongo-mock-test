@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+
 import StatCard from "../components/dashboard/StatCard";
 
 function Dashboard() {
@@ -65,30 +67,30 @@ function Dashboard() {
         </div>
 
         {/* Quick Actions */}
-        <div className="bg-white rounded-xl shadow p-6 mt-8">
+        <div className="flex flex-wrap gap-4">
 
-          <h2 className="text-xl font-bold mb-5">
-            Quick Actions
-          </h2>
+  <Link
+    to="/free"
+    className="bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700"
+  >
+    Start Free Test
+  </Link>
 
-          <div className="flex flex-wrap gap-4">
+  <Link
+    to="/premium"
+    className="border border-blue-600 px-5 py-3 rounded-lg hover:bg-blue-50"
+  >
+    Premium Tests
+  </Link>
 
-            <button className="bg-blue-600 text-white px-5 py-3 rounded-lg">
-              Start Free Test
-            </button>
+  <Link
+    to="/results"
+    className="border border-gray-400 px-5 py-3 rounded-lg hover:bg-gray-100"
+  >
+    View Results
+  </Link>
 
-            <button className="border border-blue-600 px-5 py-3 rounded-lg">
-              Premium Tests
-            </button>
-
-            <button className="border border-gray-400 px-5 py-3 rounded-lg">
-              View Results
-            </button>
-
-          </div>
-
-        </div>
-
+</div>
         {/* Logout */}
         <button
           onClick={logout}
